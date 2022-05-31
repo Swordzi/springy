@@ -1,13 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useSpring, animated } from 'react-spring'
+import './Styles/App.scss';
+
+function LoopTrue() {
+  const styles = useSpring({
+    loop: true,
+    from: { rotateZ: 0 },
+    to: { rotateZ: 180 },
+
+  })
+
+  return (
+      <animated.div
+          style={{
+            width: 80,
+            height: 80,
+            backgroundColor: '#46e891',
+            borderRadius: 16,
+            ...styles,
+          }}
+      />
+  )
+}
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
+          <LoopTrue />
+          <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
         <a
