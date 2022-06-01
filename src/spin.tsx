@@ -2,7 +2,7 @@ import React from "react";
 import { useSpring, animated } from 'react-spring';
 import './Styles/spin.scss';
 
-function LoopTrue() {
+function Spin() {
     const styles = useSpring({
         loop: true,
         from: { rotateZ: 0 },
@@ -23,5 +23,5 @@ function LoopTrue() {
     )
 }
 
-export default LoopTrue;
+export default Spin;
 
