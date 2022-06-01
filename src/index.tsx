@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './Styles/Main.scss';
 import './Styles/index.scss';
 import reportWebVitals from "./reportWebVitals";
-import LoopTrue from "./spin";
+import Spin from "./spin";
 
 
 
@@ -11,7 +11,7 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-                <LoopTrue />
+                <Spin />
                 <p>
                     Edit <code>src/App.tsx</code> and save to reload.
                 </p>
