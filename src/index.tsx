@@ -7,16 +7,16 @@ import Spin from "./spin";
 
 
 
-function App() {
+function Main() {
     return (
-        <div className="App">
-            <header className="App-header">
+        <div className="Main">
+            <header className="Main-header">
                 <Spin />
                 <p>
                     Edit <code>src/App.tsx</code> and save to reload.
                 </p>
                 <a
-                    className="App-link"
+                    className="Main-link"
                     href="https://reactjs.org"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -28,14 +28,14 @@ function App() {
     );
 }
 
-export default App;
+export default Main;
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <Main />
   </React.StrictMode>
 );
 
