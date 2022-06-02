@@ -1,42 +1,42 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+
+import Layout from './Pages/Layout';
+import Home from './Pages/Home';
+import Docs from "./Pages/Docs";
+import NoPage from "./Pages/NoPage";
 import './Styles/Main.scss';
 import './Styles/index.scss';
 import reportWebVitals from "./reportWebVitals";
-import Spin from "./spin";
+
+import './Styles/spin.scss';
 
 
-
-function Main() {
+export default function App() {
     return (
         <div className="Main">
             <header className="Main-header">
-                <Spin />
-                <p>
-                    Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <a
-                    className="Main-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </a>
+                <BrowserRouter>
+                    <Routes>
+                        <Route path="/" element={<Layout/>}>
+                            <Route index element={<Home/>}/>
+                            <Route path="docs" element={<Docs/>}/>
+                            <Route path="*" element={<NoPage/>}/>
+                        </Route>
+                    </Routes>
+                </BrowserRouter>
             </header>
         </div>
     );
 }
 
-export default Main;
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+    document.getElementById('root') as HTMLElement
 );
 root.render(
-  <React.StrictMode>
-    <Main />
-  </React.StrictMode>
+    <App/>
 );
 
 // If you want to start measuring performance in your app, pass a function
