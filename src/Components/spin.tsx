@@ -1,6 +1,6 @@
 import React from "react";
 import { useSpring, animated } from 'react-spring';
-import './Styles/spin.scss';
+import '../Styles/spin.scss';
 
 function Spin() {
     const styles = useSpring({
@@ -13,8 +13,6 @@ function Spin() {
     return (
         <animated.div className="spin"
             style={{
-                width: 80,
-                height: 80,
                 backgroundColor: '#46e891',
                 borderRadius: 16,
                 ...styles,
