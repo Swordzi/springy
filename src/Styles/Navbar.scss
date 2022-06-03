@@ -1,0 +1,94 @@
+$ib: inline-block;
+$btheme: #282c34;
+$ftheme: #46e891;
+$ttheme: white;
+
+
+@mixin theme() {
+  background-color: $btheme;
+  color: $ftheme;
+}
+
+.Navbar.header {
+
+  .mid {
+    @include theme;
+    display: $ib;
+    width: 60%;
+    margin: auto;
+    padding: 10px;
+
+    .navbar {
+      display: $ib;
+
+      .navbar li {
+        text-decoration: none;
+        color: $ttheme;
+        display: $ib;
+        margin: auto;
+      }
+
+      .navbar li a {
+        text-decoration: none;
+        color: $ftheme;
+        font-size: 18px;
+        padding: 8px 20px;
+      }
+
+      .navbar li a:hover {
+        background-color: $ftheme;
+        border: $ftheme;
+        border-radius: 2px;
+        font-size: 20px;
+      }
+
+      .navbar li a:active {
+        background-color: deepskyblue;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  .right {
+    background-color: aqua;
+    display: $ib;
+    width: 8%;
+    font-size: 18px;
+    padding: 18px 26px;
+    color: #1d19e7;
+  }
+
+  .right {
+    background-color: aqua;
+    display: $ib;
+    width: 8%;
+
+    font-size: 18px;
+    padding: 18px 26px;
+    color: #1d19e7;
+  }
+
+  .right a {
+    text-decoration: none;
+  }
+
+  .right:hover {
+    font-weight: bolder;
+  }
+
+  .left {
+    background-color: #282c34;
+    display: $ib;
+    width: 17%;
+    font-size: 18px;
+    padding: 18px 17px;
+    color: #1d19e7;
+  }
+}
+.left a{
+  text-decoration:none;
+}
+.left:hover{
+  font-weight:bolder;
+}
+
